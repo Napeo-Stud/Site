@@ -6,7 +6,7 @@
 #lst-pages footer {
     padding: 0;
 }
-@media (max-width: 770px) {
+@media (max-width: 815px) {
     #lst-pages {
         overflow-y: scroll;
     }
@@ -36,7 +36,7 @@
     -webkit-mask-image:  linear-gradient(top, #000000 5%, #00000000 30%);
     -webkit-mask-image:  -webkit-linear-gradient(top, #000000 5%, #00000000 30%);
 }
-@media (min-width : 770px){#grdt-ovr, #ovr-box {transform: translateY(2.5rem);}}
+@media (min-width : 815px){#grdt-ovr, #ovr-box {transform: translateY(2.5rem);}}
 
 #proj-lst {
     height: 100vh;
@@ -106,7 +106,7 @@ img {
     margin: 4rem 8vw 1rem 8vw;
     height: 50vh;
 }
-@media (max-width : 770px){.flx-win {
+@media (max-width : 815px){.flx-win {
     margin: 3rem 8vw 1rem 8vw;
 }}
 .flx-win a figure img {

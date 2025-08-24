@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Récupère toutes les balises avec un attribut data-index
-    const elements = document.querySelectorAll('[data-index]');
+    const elements = document.querySelectorAll('.indexed1');
     
     console.log('Elements with data-index:', elements); // Log pour vérifier les éléments récupérés
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         timeoutId = setTimeout(() => {
             intervalId = setInterval(cycleClasses, time);
-        }, 3000);
+        }, 5000);
     }
 
     // Fonction pour ajouter et retirer la classe après un certain temps

@@ -13,8 +13,10 @@
 
 #txt-box a {
     position: absolute;
+    width: calc(100% - 2rem);
     top: 0;
     left: 0;
+    padding: 0 1rem;
     transition: transform .5s ease-in-out;
     background-color: var(--secondary-color);
 }
@@ -65,7 +67,7 @@ a.OnFrame { z-index: 4; }
     margin-top: 1rem;
     overflow: visible;
 }
-@media (max-width: 770px) {#grid{max-width: 25rem;}}
+@media (max-width: 815px) {#grid{max-width: 25rem;}}
 
 #page-btn-OnGrid {
     height: unset;
@@ -116,7 +118,7 @@ a.OnFrame { z-index: 4; }
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 815px) {
     #img2, #img3 {display: none;}
 
     #page-btn-OnGrid {display:block;}
@@ -192,12 +194,12 @@ a.OnFrame { z-index: 4; }
     pointer-events: none;
 }
 
-@media (max-width: 770px) {#ttl h2 {font-size: 2.3rem;}}
+@media (max-width: 815px) {#ttl h2 {font-size: 2.3rem;}}
 
 #caption {
     grid-area: capt;
     background-color: var(--secondary-color);
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 0rem 1rem 0rem;
 }
 
 #frm-pssr {
@@ -223,7 +225,7 @@ a.OnFrame { z-index: 4; }
     z-index: 5;
 }
 .grid-ctrl-btns:hover {transform: translateY(-.3rem);}
-@media (max-width: 770px){.grid-ctrl-btns:hover {transform: translateY(0);}}
+/* @media (max-width: 815px){.grid-ctrl-btns:hover {transform: translateY(0);}} */
 
 #frm-pssr * {
     font-weight: 300;
@@ -252,7 +254,7 @@ a.OnFrame { z-index: 4; }
     font-size: 1.4rem;
     font-weight: 500;
 }
-@media (max-width: 770px) {#page-btn {display: none;}}
+@media (max-width: 815px) {#page-btn {display: none;}}
 
 #pts-box {
     height: 1rem;
@@ -264,6 +266,7 @@ a.OnFrame { z-index: 4; }
     font-weight: 300;
     font-size: 2.5rem;
     color: var(--text-color);
+    margin-bottom: .5rem;
     /* background-color: aqua; */
 }
 

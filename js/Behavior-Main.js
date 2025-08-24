@@ -139,13 +139,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /* -------------------------------------- */
     //Établie de manière dynamique les images par défault
-
+    
+    // Sélectionne tous les articles dflt-win
     var elements = document.querySelectorAll('article.dflt-win');
 
-    elements.forEach(function (element) {
-        
-        var img = element.querySelector('figure img');
+    // Puis poursuis le traitement pour les autres (sauter le premier déjà modifié)
+    elements.forEach(function (element, idx) {
+    
+        // Ignore le premier déjà transformé en cvr-win
+        if (idx === 0) {
+        elements[0].classList.remove('dflt-win');
+        elements[0].classList.add('cvr-win');
+        return;
+        }
+        // Sélectionne tous les <figure> enfants de cet article
+        var figures = element.querySelectorAll('figure');
 
+        figures.forEach(function(figure) {
+        var img = figure.querySelector('img');
         if (img) {
             // Crée un nouvel objet Image pour obtenir les dimensions réelles
             var image = new Image();
@@ -155,13 +166,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 var width = image.naturalWidth;
                 var height = image.naturalHeight;
 
-                // Détermine l'orientation et assigne la classe appropriée
+                // Détermine l'orientation et assigne la classe appropriée à la figure
                 if (width > height) {
-                    element.classList.remove('dflt-win');
-                    element.classList.add('hrztl-win');
+                    figure.classList.remove('vertical-figure');
+                    figure.classList.add('horizontal-figure');
                 } else {
-                    element.classList.remove('dflt-win');
-                    element.classList.add('vrtcl-win');
+                    figure.classList.remove('horizontal-figure');
+                    figure.classList.add('vertical-figure');
                 }
             };
 
@@ -170,19 +181,21 @@ document.addEventListener("DOMContentLoaded", function() {
             };
         } else {
             console.error('Aucune image trouvée dans l\'élément :', element);
-        }
-    });
-
-    /* -------------------------------------- */
+            }
+        });
     
-    //Détermine le comportement des Flèches de Passage
-    var elements = document.getElementsByClassName("svg");
+    }); // <-- Ajout du crochet fermant manquant ici
+    
+        /* -------------------------------------- */
+        
+        //Détermine le comportement des Flèches de Passage
+        var elements = document.getElementsByClassName("svg");
     var pageDiv = document.querySelector('.pages');
 
     var ScrollByArw = function() {
         var parent = this.parentElement.parentElement.parentElement;
         // Vérifier la largeur de l'écran
-        if (window.innerWidth > 770) {
+        if (window.innerWidth > 815) {
             // Faites défiler horizontalement par la largeur de l'écran
             pageDiv.scrollTo({
                     left: pageDiv.scrollLeft + parent.offsetWidth,
