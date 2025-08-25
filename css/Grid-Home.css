@@ -189,6 +189,8 @@ a.OnFrame { z-index: 4; }
     width: 100%;
     font-size: 2.8rem;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     hyphens: manual;
     pointer-events: none;
