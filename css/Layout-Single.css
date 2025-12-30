@@ -22,7 +22,7 @@
         }
     }
 
-    @media (max-width: 815px), (max-height: 445px) {
+    @media (max-width: 1180px), (max-height: 445px) {
         #single-pages main {
             height: calc(100vh - 5.5rem);
         }
@@ -32,7 +32,7 @@
         }
     }
 
-    @media (max-width: 815px) and (min-height: 400px){
+    @media (max-width: 1180px) and (min-height: 400px){
         #single-pages main {height: fit-content;}
         #single-pages h1 {font-size: 4rem;}
         #single-pages h4 {

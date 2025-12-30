@@ -29,7 +29,7 @@ body {
     background-size: 240px 240px, 240px 240px, 20px 20px, 20px 20px;
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
-@media screen and (max-width: 815px) {  
+@media screen and (max-width: 1180px) {  
     body {
         overflow-y: scroll;
         overflow-x: hidden;
@@ -53,7 +53,7 @@ button {
     justify-content:space-around;
 }
 
-@media (max-width: 815px) and (min-height: 400px) {
+@media (max-width: 1180px) and (min-height: 400px) {
     .screen {
         flex-direction: column;
         height: fit-content;
@@ -90,7 +90,7 @@ main *{
     justify-content: start;
 }
 
-@media (max-width: 815px) and (min-height: 400px) {
+@media (max-width: 1180px) and (min-height: 400px) {
     #hrztl {
         flex-direction: column;
         width: 100vw;
@@ -174,7 +174,7 @@ article ul {
     margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 1180px) {
     article ul {
         max-height: 32rem;
     }
@@ -186,6 +186,7 @@ li ul {
     border-left: 2px solid var(--text-color);
     padding-left: 2rem;
     margin-left: 1.2rem;
+    margin-bottom: unset;
 }
 
 article li {
@@ -219,10 +220,11 @@ article li p {
     min-width: unset;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     color: var(--text-color);
     font-family: "Basteleur";
     margin-bottom: 1rem;
+    min-width: fit-content;
     max-width: 30rem;
     height: fit-content;
     hyphens: auto;
@@ -239,7 +241,7 @@ h2 {
     margin-bottom: 1.6rem;
 }
 
-h3 {
+h3,h5 {
     font-size: 2.4rem;
     font-weight: normal;
 }
@@ -276,7 +278,14 @@ article li em strong, p em strong {
     font-weight: 400;
 }
 
-@media screen and (max-width: 815px) { p {width: unset;} }
+@media screen and (max-width: 1180px) {
+
+    p {width: unset;} 
+
+    h5 {
+        font-size: 1.4rem;
+    }
+}
 @media (max-height: 420px) {
     p {
         width: 19rem;
@@ -301,7 +310,7 @@ nav {
     z-index: 2;
 }
 
-@media (max-width : 815px) { 
+@media (max-width : 1180px) { 
     nav {
         top: 0;
         height: 100vh;
@@ -321,7 +330,7 @@ nav #toggle {
     filter:drop-shadow(0 0 3px var(--background-color));
     transition: transform 0.5s ease;
 }
-@media (max-width : 815px) {nav #toggle {display: flex;}}
+@media (max-width : 1180px) {nav #toggle {display: flex;}}
 
 
 #blr-bkgrd {
@@ -332,6 +341,7 @@ nav #toggle {
     width: 100vw;
     transition: all 0.5s ease;
     backdrop-filter: blur(1rem) opacity(0);
+    -webkit-backdrop-filter: blur(1rem) opacity(0);
     background-color: rgba(var(--background-color-rgb), 0);
     opacity: 0;
 }
@@ -347,7 +357,7 @@ nav #toggle {
 
 menu {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     position: relative;
     top: 0;
     display: flex;
@@ -355,7 +365,7 @@ menu {
     justify-content: center;
     align-items: center;
 }
-@media (max-width : 815px) {
+@media (max-width : 1180px) {
     menu {
         width: calc(100% - 2*3.5rem);
         height: 100%;
@@ -371,7 +381,7 @@ menu {
     align-items: center;
     margin: .3rem 0 0 0;
 }
-@media (max-width : 815px) {#ClicZone {
+@media (max-width : 1180px) {#ClicZone {
     width: fit-content;
     flex-direction: column;
     margin: 0;
@@ -383,7 +393,7 @@ ul {
     align-items: center;
     justify-content: center;
 }
-@media (max-width : 815px) {ul {flex-direction: column;}}
+@media (max-width : 1180px) {ul {flex-direction: column;}}
 
 menu li {
     font-size: 1.2rem;
@@ -392,7 +402,7 @@ menu li {
     height: fit-content;
     /* text-decoration:none; */
 }
-@media (min-width : 815px) { 
+@media (min-width : 1180px) { 
     menu li:hover {
     font-size: 1.2rem;
     /* text-decoration: underline; */
@@ -430,7 +440,7 @@ menu li {
     }
 }
 
-@media (max-width : 815px) {
+@media (max-width : 1180px) {
     menu li {
         font-size: 2.5rem;
         margin: 1rem;
@@ -443,10 +453,11 @@ menu li {
 .show {
     left: 0;
 }
-@media (max-width : 815px) {
+@media (max-width : 1180px) {
     .show #blr-bkgrd {
         pointer-events: auto;
         backdrop-filter: blur(1rem) opacity(1);
+        -webkit-backdrop-filter: blur(1rem) opacity(1);
         background-color: rgba(var(--background-color-rgb), .75);
         opacity: 1;
     }
@@ -477,7 +488,7 @@ menu li {
     width: fit-content;
     justify-content: left;
 }
-@media (max-width : 815px) {#ClicZone #Switch-Space {margin-top: 6rem;}}
+@media (max-width : 1180px) {#ClicZone #Switch-Space {margin-top: 6rem;}}
 #Switch-Space p {
     max-width: none;
     min-width: fit-content;
@@ -525,32 +536,45 @@ menu li {
     flex-direction: column;
     height: calc(100% - 1rem);
 }
-.sketchfab-win div {
-    aspect-ratio: 5/4;
-    height: calc(100% - 3.6rem);
+
+.vimeo-win:hover #filler p, .sketchfab-win:hover #filler p {
+    display: block;
 }
-.v div {
-    aspect-ratio: 4/5;
-    height: calc(100% - 3.6rem);
+
+#filler p{
+    display: none;
+    top: -.7rem;
+    left: calc(50vw - 3rem);
+    position: absolute;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: .7rem;
+    margin: 1rem 0 1rem 0;
+    min-width: unset;
+    max-width: unset;
+    width: unset;
+    padding: .2rem;
+    border-radius: .2rem;
+    background-color: var(--accent-color);
+    z-index: 1;
 }
-.h div {
-    aspect-ratio: 5/4;
-    height: calc(100% - 3.6rem);
+
+.sketchfab-win div {aspect-ratio: 5/4;}
+
+.v #inner {aspect-ratio: 4/5;}
+.h #inner {aspect-ratio: 5/4;}
+.v2 #inner {aspect-ratio: 9/16;}
+.h2 #inner {aspect-ratio: 16/9;}
+
+#inner {
+    position: relative;
+    height: 100%;
 }
 
 #filler {
     aspect-ratio: unset;
     height: unset;
+    border-radius: unset;
 }
-
-@media (max-height: 400px), (max-width: 815px) {
-    .sketchfab-win, .vimeo-win {
-        display: inline;
-        width: calc(100% - 6rem);
-        max-width: 32rem;
-    }
-}
-
 .sketchfab-win div, .vimeo-win div{
     border-radius: 2rem;
     overflow: hidden;
@@ -563,25 +587,38 @@ iframe {
     background-color: var(--secondary-color);
 }
 
-.sketchfab-win p, .vimeo-win p {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: .8rem;
-    margin: 1rem 0 1rem 0;
+@media (max-height: 400px), (max-width: 1180px) {
+    .sketchfab-win, .vimeo-win {
+        display: inline;
+        width: calc(100% - 6rem);
+        max-width: 32rem;
+        margin: 2rem 0 2rem 0;
+    }
+    .sketchfab-win div, .vimeo-win div {border-radius: 1rem;}
+    iframe { border-radius: 1rem;}
 }
 
-@media screen and (max-width: 815px) {
-    .sketchfab-win p, .vimeo-win p {
-        display: none;
-    }
-}
+@media screen and (max-width: 1180px) {#filler p {display: none;}}
 
 .vimeo-win div iframe {
     position:absolute;
     top:0;
     left:0;
 }
-.vimeo-win div {
+
+video { 
+    border-radius: 2rem;
     position: relative;
+    height: 100%;
+    width: unset;
+    z-index: 1;
+    margin: 0 .5rem 1rem .5rem;
+}
+@media (max-height: 400px), (max-width: 1180px) {
+    video {
+        border-radius: 1rem;
+        width: 100%;
+    }
 }
 
 /* Spécifiques aux Flèches de Passage*/
@@ -624,7 +661,7 @@ iframe {
 #stky-arw {position: sticky;}
 #rltv-arw {position: relative;}
 
-@media (max-width: 815px) {
+@media (max-width: 1180px) {
     #rltv-arw, #stky-arw {
         position: sticky;
         transform: rotate(90deg) translate(1.5rem,calc(-50vw + 1.7rem + 3rem )) scale(.5);
@@ -651,7 +688,7 @@ iframe {
 }
 
 /*--- hrztl phone ---*/
-@media (max-width: 815px), (max-height: 400px) {
+@media (max-width: 1180px), (max-height: 400px) {
     .pages main {
         overflow: hidden;
     }
@@ -664,7 +701,7 @@ iframe {
 }
 
 /*--- vtrcl phone ---*/
-@media (max-width: 815px) and (min-height: 400px){
+@media (max-width: 1180px) and (min-height: 400px){
     .pages {
         display: flex;
         flex-direction: column;
@@ -707,16 +744,23 @@ img {
     height: 100%;
     display: flex;
     flex-direction: column;
+    aspect-ratio: 1/1;
 }
+
+/* .dynmc-win img {
+    width: unset;
+} */
+
 .dynmc-win figure {
     border-radius: 500px 500px 0 0;
     overflow: hidden;
 }
 
-@media (max-height: 400px), (max-width: 815px) {
+@media (max-height: 400px), (max-width: 1180px) {
     .dynmc-win {
         height: unset;
         margin-top: 2rem;
+        aspect-ratio: unset;
     }
     .dynmc-win figure {
         width: 14rem;
@@ -731,7 +775,6 @@ img {
     height: calc(100% - 1rem);
 }
 .cvr-win figure {aspect-ratio: 5/4;}
-
 .cvr-win figure, .dflt-win figure {
     width: unset;
     border-radius: 2rem;
@@ -739,24 +782,36 @@ img {
     margin:0 .5rem 1rem .5rem;
 }
 
-@media (max-height: 400px), (max-width: 815px) {
+.dflt-win img {width: fit-content;}
+
+@media (max-height: 400px), (max-width: 1180px) {
     .cvr-win, .dflt-win {
         width: calc(100% - 5rem);
         max-width: 32rem;
         flex-wrap: wrap;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
-    .cvr-win {margin-bottom: 5rem;}
+    .dflt-win figure, .cvr-win figure {
+        border-radius: 1rem;
+        height: unset;
+    }
     .cvr-win figure {aspect-ratio: 4/5;}
+    .dflt-win img {width: 100%;}
 }
 
-.vertical-figure {aspect-ratio: 4/5;}
+/* .vertical-figure {aspect-ratio: 4/5;}
 .horizontal-figure {aspect-ratio: 5/4;}
+.square-figure {aspect-ratio: 1/1;} */
 
 figcaption p {
     margin: 0;
     width: unset;
     min-width: unset;
+}
+@media (max-width: 1180px) {
+    figcaption em {font-size: 0.7rem;}
+    figcaption p {font-size: 0.7rem;}
+    figcaption strong {font-size: 0.7rem;}
 }
 
 figcaption {
@@ -767,8 +822,16 @@ figcaption {
     left: 1rem;
     height: fit-content;
     width: fit-content;
-    max-width: 66%;
+    max-width: 50%;
     background-color: var(--secondary-color);
+}
+
+@media (max-height: 400px), (max-width: 1180px) {
+    figcaption {
+        border-radius: .7rem;
+        bottom: .5rem;
+        left: .5rem;
+    }
 }
 
 /* --------------------------- Artcl Display Params ----------------------------- */
@@ -790,13 +853,13 @@ figcaption {
     flex-direction: column;
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 1180px) {
     .title, .artcl, .under-artcl {
             margin: 0 2.5rem;
         }
     }
 
-@media (min-width: 815px) and (min-height: 490px) {
+@media (min-width: 1180px) and (min-height: 490px) {
     .artcl {
         margin-top: 8.9rem;
     }

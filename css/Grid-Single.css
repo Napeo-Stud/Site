@@ -26,20 +26,23 @@
     align-items: center;
     justify-content: center;
     grid-area: arw;
-    background-color: var(--accent-color);
+    background-color: var(--next-accent-color);
     overflow: visible;
 }
 
-@media (max-width: 815px) {
+#grid #envlp svg {stroke: var(--next-text-color);}
+
+@media (max-width: 1180px) {
     #frm {
+        width: calc(100% - 5rem);
         height: 100vh;
-        aspect-ratio: 4 / 5;
-        width: 100vw;
+        max-width: 32rem;
+        margin-top: 5rem;
     }
 
     #grid {
+        width: 100%;
         height: unset;
-        width: 70%;
     }
 }
 
@@ -56,8 +59,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--text-color);
+    background-color: var(--next-text-color);
     border-radius: 50%;
+    aspect-ratio: 1/1;
 }
 
 #txt svg {
@@ -68,7 +72,7 @@
 }
 #circle {fill: transparent;}
 #svg-txt {
-    fill: var(--accent-color);
+    fill: var(--next-accent-color);
     font-family: "Basteleur";
     font-size: 265%;
     font-weight: bold;
@@ -77,7 +81,7 @@
 
 @keyframes Rotate {
     0% {transform: rotate(0);}
-    100% {transform: rotate(360deg);}
+    100% {transform: rotate(-360deg);}
 }
 
 #img1, #img2 {
@@ -88,7 +92,7 @@
     justify-content: center;
     align-items: center;
     border: .6rem solid;
-    border-color: var(--accent-color);
+    border-color: var(--next-accent-color);
 }
 #img1 {grid-area: img1;}
 #img2 {

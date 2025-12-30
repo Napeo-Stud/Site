@@ -6,7 +6,7 @@
 #lst-pages footer {
     padding: 0;
 }
-@media (max-width: 815px) {
+@media (max-width: 1180px) {
     #lst-pages {
         overflow-y: scroll;
     }
@@ -36,7 +36,7 @@
     -webkit-mask-image:  linear-gradient(top, #000000 5%, #00000000 30%);
     -webkit-mask-image:  -webkit-linear-gradient(top, #000000 5%, #00000000 30%);
 }
-@media (min-width : 815px){#grdt-ovr, #ovr-box {transform: translateY(2.5rem);}}
+@media (min-width : 1180px){#grdt-ovr, #ovr-box {transform: translateY(2.5rem);}}
 
 #proj-lst {
     height: 100vh;
@@ -48,7 +48,17 @@
 
 .dflt-li {
     opacity: .4;
-    height: 3rem;
+    /* height: 3rem; */
+}
+@media (max-width : 1180px){
+    .dflt-li {
+        font-size: 2rem;
+        max-width: calc(100% - 6.3rem);
+    }
+    .dflt-li:hover {
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+    }
 }
 
 #space {height: calc(100vh - 2.7rem);}
@@ -91,26 +101,42 @@ position: relative;
 height: 100%;
 width: 100%;
 z-index: -1;
+border-radius: 2rem;
+overflow: hidden;
 }
 
 img {
     height: 100%;
-    width: 100%;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .flx-win {
+    width: fit-content;
+    max-width: 88vw;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+    align-items: center;
     margin: 4rem 8vw 1rem 8vw;
     height: 50vh;
 }
-@media (max-width : 815px){.flx-win {
-    margin: 3rem 8vw 1rem 8vw;
-}}
+
+.flx-win a {
+    width: fit-content;
+    height: fit-content;
+    max-width: 100%;
+}
+
+@media (max-width : 1180px){
+    .flx-win {
+        margin: 3rem 8vw 1rem 8vw;
+    }
+}
 .flx-win a figure img {
     height: unset;
+    width: unset;
+    max-width: 88vw;
     max-height: 50vh;
     object-fit: contain;
     border-radius: 2rem;
@@ -133,7 +159,13 @@ article:hover {transform: scale(1.035);}
     padding: 1rem;
 }
 .caption a h3 {width: 100%;}
-.caption a p {margin-bottom: 0;}
+@media (max-width : 1180px){
+    .caption a h3 {font-size: 1.5rem;}
+}
+.caption a p {
+    margin-bottom: 0;
+    min-width: 100%;
+}
 
 #min-arw {
     width: 3rem;

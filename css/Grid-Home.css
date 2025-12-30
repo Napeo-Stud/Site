@@ -67,7 +67,7 @@ a.OnFrame { z-index: 4; }
     margin-top: 1rem;
     overflow: visible;
 }
-@media (max-width: 815px) {#grid{max-width: 25rem;}}
+@media (max-width: 1180px) {#grid{max-width: 25rem;}}
 
 #page-btn-OnGrid {
     height: unset;
@@ -118,7 +118,7 @@ a.OnFrame { z-index: 4; }
     }
 }
 
-@media (max-width: 815px) {
+@media (max-width: 1180px) {
     #img2, #img3 {display: none;}
 
     #page-btn-OnGrid {display:block;}
@@ -196,7 +196,12 @@ a.OnFrame { z-index: 4; }
     pointer-events: none;
 }
 
-@media (max-width: 815px) {#ttl h2 {font-size: 2.3rem;}}
+@media (max-width: 1180px) {
+    
+    #ttl h2 {font-size: 2.3rem;}
+    
+    #txt-box h3 {font-size: 1.5rem;}
+}
 
 #caption {
     grid-area: capt;
@@ -227,7 +232,7 @@ a.OnFrame { z-index: 4; }
     z-index: 5;
 }
 .grid-ctrl-btns:hover {transform: translateY(-.3rem);}
-/* @media (max-width: 815px){.grid-ctrl-btns:hover {transform: translateY(0);}} */
+/* @media (max-width: 1180px){.grid-ctrl-btns:hover {transform: translateY(0);}} */
 
 #frm-pssr * {
     font-weight: 300;
@@ -256,7 +261,7 @@ a.OnFrame { z-index: 4; }
     font-size: 1.4rem;
     font-weight: 500;
 }
-@media (max-width: 815px) {#page-btn {display: none;}}
+@media (max-width: 1180px) {#page-btn {display: none;}}
 
 #pts-box {
     height: 1rem;
@@ -298,3 +303,4 @@ a.OnFrame { z-index: 4; }
     50% {transform: translateY(.3rem);}
     100% {transform: translateY(0);}
 }
+

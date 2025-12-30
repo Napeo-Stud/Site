@@ -6,7 +6,7 @@
     overflow: hidden;
 }
 
-@media (min-width: 815px) { 
+@media (min-width: 1180px) { 
     footer {
         justify-content: right;
     }
@@ -28,7 +28,7 @@
     font-size: 2rem;
     margin-bottom: 2rem;
 }
-@media (max-width: 815px) {
+@media (max-width: 1180px) {
     #frt-pages .link h2 {font-size: 2rem;}   
 }
 
@@ -48,7 +48,7 @@
     background-color: var(--secondary-color);
     border-radius: 2rem;
 }
-@media (max-width: 815px) {
+@media (max-width: 1180px) {
     #linkgrid {
         display: flex;
         flex-direction: column;

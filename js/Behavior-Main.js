@@ -152,50 +152,18 @@ document.addEventListener("DOMContentLoaded", function() {
         elements[0].classList.add('cvr-win');
         return;
         }
-        // Sélectionne tous les <figure> enfants de cet article
-        var figures = element.querySelectorAll('figure');
+    });
 
-        figures.forEach(function(figure) {
-        var img = figure.querySelector('img');
-        if (img) {
-            // Crée un nouvel objet Image pour obtenir les dimensions réelles
-            var image = new Image();
-            image.src = img.src;
-
-            image.onload = function () {
-                var width = image.naturalWidth;
-                var height = image.naturalHeight;
-
-                // Détermine l'orientation et assigne la classe appropriée à la figure
-                if (width > height) {
-                    figure.classList.remove('vertical-figure');
-                    figure.classList.add('horizontal-figure');
-                } else {
-                    figure.classList.remove('horizontal-figure');
-                    figure.classList.add('vertical-figure');
-                }
-            };
-
-            image.onerror = function () {
-                console.error('Erreur lors du chargement de l\'image : ' + img.src);
-            };
-        } else {
-            console.error('Aucune image trouvée dans l\'élément :', element);
-            }
-        });
-    
-    }); // <-- Ajout du crochet fermant manquant ici
-    
         /* -------------------------------------- */
         
         //Détermine le comportement des Flèches de Passage
-        var elements = document.getElementsByClassName("svg");
+    var elements = document.getElementsByClassName("svg");
     var pageDiv = document.querySelector('.pages');
 
     var ScrollByArw = function() {
         var parent = this.parentElement.parentElement.parentElement;
         // Vérifier la largeur de l'écran
-        if (window.innerWidth > 815) {
+        if (window.innerWidth > 1180) {
             // Faites défiler horizontalement par la largeur de l'écran
             pageDiv.scrollTo({
                     left: pageDiv.scrollLeft + parent.offsetWidth,

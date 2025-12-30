@@ -15,7 +15,7 @@
     padding-bottom: 0;
 }
 
-@media (max-width: 815px), (max-height: 400px) {
+@media (max-width: 1180px), (max-height: 400px) {
     #frt-pages main {
         height: calc(100vh - 5.5rem);
     }
@@ -29,7 +29,7 @@
     }
 }
 
-@media (max-width: 815px) and (min-height: 400px){
+@media (max-width: 1180px) and (min-height: 400px){
     #frt-pages main {
         height: fit-content;
     }
