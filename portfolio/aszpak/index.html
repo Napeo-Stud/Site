@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <meta name="theme-color" content="#120c0a" />
-    <title>Aszpak - Napeo Studio</title>
+    <title>Aszpak - Noé Péan</title>
     <link rel="icon" href='/Site/images/Icon32.png'>
     <link rel="stylesheet" href='/Site/css/Layout-Main.css'>
     <script src='/Site/js/Behavior-Main.js'></script>
+    <script>
+        screen.orientation.lock(any);
+    </script>
     <style>
         :root {
             --text-color: #fbf3ef;
@@ -132,7 +136,7 @@
 	
 	@aszpak_paris
 
-</a>)</em>. Une marque de maroquinerie basé à paris, produisant des sacs à l&rsquo;allure minimaliste à partir de chutes de cuires.</p>
+</a>)</em>. Une marque de maroquinerie basé à Paris, produisant des sacs à l&rsquo;allure minimaliste à partir de chutes de cuires.</p>
 </article>
 
 <article class="dflt-win">
@@ -144,7 +148,7 @@
 </article>
 
 <article class="artcl"><p> La vidéo que vous venez de voir est un projet produit à posteriori de ma période chez Aszpak. Je l&rsquo;ai réalisé afin de rendre hommage à la marque et aux idées que je n&rsquo;ai pas eu le temps de finaliser lorsque j&rsquo;y étais.</p>
-<p> Néanmoins, durant mon temps chez eux, j&rsquo;ai pu développer une multitude d&rsquo;idées de mis en scène en des produits.</p>
+<p> Néanmoins, durant mon temps chez eux, j&rsquo;ai pu développer une multitude d&rsquo;idées de mis en scène des produits de la marque.</p>
 <p>En voici quelques brouillons :</p>
 </article>
 
@@ -155,7 +159,7 @@
 </figure>
 </article>
 
-<article class="artcl"><p> J&rsquo;ai ainsi pu réalisé plusieurs mis en scènes et animations 3D afin de promouvoirs la marque sur les réseaux sociaux ainsi qu&rsquo;au près de ses collaborateurs.</p>
+<article class="artcl"><p> J&rsquo;ai ainsi pu réalisé plusieurs de ces mis en scènes en animations et visuels 3D afin de promouvoirs la marque sur les réseaux sociaux ainsi qu&rsquo;au près des collaborateurs de Aszpak.</p>
 </article>
 
 <article class="dflt-win">
@@ -199,6 +203,222 @@
 </ul>
 <p> Ces réalisations ont non seulement enrichi mon portfolio, mais aussi renforcé ma maîtrise de la promotion de produit par la mise en scène.</p>
 </article>
+
+            
+ 
+
+
+
+
+
+    
+      
+        
+      
+    
+      
+        
+      
+    
+    
+
+    
+      
+        
+      
+    
+    
+
+<style>
+
+  #hidder {
+    position: absolute;
+    height: calc(100% - 12rem);
+    width: calc(100%);
+    top: 4rem;
+    left: 0;
+    margin: 4.5rem 0;
+    overflow: hidden;
+  }
+  
+  #reco {
+    aspect-ratio: 5/4;
+    height: calc(100% - 1rem);
+    margin: 0 5rem 2rem 5rem;
+    padding: 0 4rem;
+    background-color: var(--secondary-color);
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 1180px) {
+    #hidder {
+      top: 0;
+      height: calc(100% - 6rem);
+    }
+  }
+
+  #reco h2 {
+    margin: 2rem 0;
+    max-width: unset;
+  }
+  #reco p {max-width: unset;}
+
+  #reco #pts-box {margin-top: .5rem;}
+  #reco #frm-pssr {
+    position: absolute;
+    left: unset;
+    right: 4rem;
+    bottom: 4rem;
+  }
+
+  .reco-lettres #autheur {
+    width: 100%;
+    text-align: right;
+    max-width: 64rem;
+    margin-bottom: 4rem;
+  }
+
+  .reco-lettres {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 8rem);
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform .5s ease;
+    background-color: var(--secondary-color);
+    z-index: 1;
+  }
+
+  .reco-lettres h3 {
+    max-width: 64rem;
+    margin: 0 1.5rem 2rem 1.5rem;
+    font-size: 2rem;
+  }
+
+  .reco-lettres a {
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    background-color: var(--accent-color);
+    border-radius: 1rem;
+    z-index: 2;
+    margin-left: 1rem;
+    margin-bottom: .6rem;
+    transform: scale(1);
+    transition: transform .3s ease;
+  }
+  .reco-lettres a:hover {transform: scale(1.035)}
+
+
+  .reco-lettres a p {
+    width: unset;
+    min-width: unset;
+    padding: .5rem;
+    margin-bottom: unset;
+    transition: font-weight .3s ease;
+  }
+  .reco-lettres a:hover p {font-weight: 700;}
+
+  #projets-title {margin-bottom: 1.5rem;}
+
+  @media (max-width: 1180px) {
+    #reco {
+      width: calc(100% - 10rem);
+      margin: 3rem 2.5rem 3rem 2.5rem;
+      min-width: unset;
+      max-width: 26rem;
+      height: 37rem;
+      border-radius: 2rem;
+      padding: 0 2rem;
+    }
+
+    #reco p {
+      font-size: 1.1rem;
+    }
+
+    #reco h2 {
+      margin: 1rem 0 0 0;
+      font-size: 2.5rem;
+    }
+
+    #reco h3 {
+      font-size: 1.2rem;
+      margin: 0 0 .5rem 1rem;
+      max-height: 20rem;
+      hyphens: auto;
+    }
+
+    #reco #frm-pssr {
+      right: 1rem;
+      bottom: 1rem;
+    }
+
+    .reco-lettres {
+      height: calc(100% - 2rem);
+      width: calc(100% - 4rem);
+      margin: 1rem 0;
+      padding: 0 2rem;
+    }
+    .reco-lettres #autheur {
+      min-width: unset;
+      margin-bottom: 1rem;
+    }
+
+    #projets-title {margin-bottom: 1rem;}
+  }
+
+</style>
+
+<article id="reco">
+  <h2 class="fr">Avis</h2>
+  <h2 class="en">Review</h2>
+  <div id="hidder" >
+    <div id="galleryA-container" class="reco-lettres galleryA-indexed" data-index="2">
+      <h3 class="fr">Une excellente expertise et maîtrise de la 3D qui a permis à la marque de diversifier sa stratégie commerciale et artistique sur son site web et ses réseaux sociaux.</h3>
+      <h3 class="en">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+      <p id="autheur">Alexandre Samson (Fondateur et Directeur artistique de Aszpak)</p>
+
+      <p id="projets-title" class="fr"><b>Projets Liés :</b></p>
+      <p id="projets-title" class="en"><b>Related Projects:</b></p>
+      <div>
+        
+        
+        
+        <a class="fr" href="/Site/portfolio/aszpak/" title="Aszpak">
+          <p>
+            Aszpak
+          </p>
+        </a>
+        <a class="en" href="/Site/portfolio/aszpak/" title="Aszpak">
+          <p>
+            Aszpak
+          </p>
+        </a>
+        
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+    
+
+    
+      
+        
+      
+    
+    
+
+    
+      
+        
+      
+    
+    
 
             <article id="frm">  
     
@@ -252,10 +472,10 @@
     © 2024 Noé PÉAN →&ensp;<a href='/Site/legals/'>Legal Notice</a>
 </p>
             <p id="mail" class="ftr fr">
-    Contactez moi via →&ensp;<a href="mailto:hello@napeo.stud" onClick = "javascript:window.open('mailto:hello@napeo.stud', 'mail'); event.preventDefault()">hello@napeo.stud</a> 
+    Contactez moi via →&ensp;<a href="mailto:hello@noe-pean.com" onClick = "javascript:window.open('mailto:hello@noe-pean.com', 'mail'); event.preventDefault()">hello@noe-pean.com</a> 
 </p>
 <p id="mail" class="ftr en">
-    Contact me via →&ensp;<a href="mailto:hello@napeo.stud" onClick = "javascript:window.open('mailto:hello@napeo.stud', 'mail'); event.preventDefault()">hello@napeo.stud</a> 
+    Contact me via →&ensp;<a href="mailto:hello@noe-pean.com" onClick = "javascript:window.open('mailto:hello@noe-pean.com', 'mail'); event.preventDefault()">hello@noe-pean.com</a> 
 </p>
         </footer>
     </div>

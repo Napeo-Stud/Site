@@ -19,7 +19,7 @@
 *::-webkit-scrollbar-track {background: var(--background-color);}
 
 body {
-    overflow: hidden;/**/
+    overflow: hidden;
     background: var(--background-color);
     background-image:
     linear-gradient(rgba(var(--text-color-rgb), .08) 2px, transparent 2px),
@@ -536,9 +536,10 @@ menu li {
     flex-direction: column;
     height: calc(100% - 1rem);
 }
-
-.vimeo-win:hover #filler p, .sketchfab-win:hover #filler p {
-    display: block;
+@media (min-height: 400px), (min-width: 1180px) {
+    .vimeo-win:hover #filler p, .sketchfab-win:hover #filler p {
+        display: block;
+    }
 }
 
 #filler p{
@@ -745,7 +746,7 @@ img {
     height: 100%;
     display: flex;
     flex-direction: column;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
 }
 
 /* .dynmc-win img {

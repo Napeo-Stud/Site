@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-
+     
     // Détermine la var RGB de text-color pour la couleur de la grille de fond
     function hexToRgb(hex) {
         hex = hex.replace("#", "");
